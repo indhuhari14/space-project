@@ -1,17 +1,43 @@
+@font-face {
+    font-family: 'Bellefair';
+    src: url('../font/bellefair-regular-webfont.woff') format('woff2'),
+         url('../font/bellefair-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Barlow';
+    src: url('../font/barlow-regular-webfont.woff') format('woff');
+    src: url('../font/barlow-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Barlow Condensed';
+    src: url('../font/barlowcondensed-regular-webfont.woff') format('woff');
+    src: url('../font/barlowcondensed-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
+.site-head{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
 .nav-bar{
     height: 96px;
-    max-width: 1385px;
+    max-width: 96%;
+    width: 100%;
     margin: 40px 0 0 55px;
     position: relative;
 }
 .line{
-    flex-grow: 1;
+    width: 34%;
     margin-left: 64px;
     margin-right: -30px;
     
@@ -23,7 +49,7 @@
 }
 .menu-wrapper{
     height: 100%;
-    width: 830px;
+    width: 60%;
     list-style: none;
     position: relative;
 }
@@ -47,7 +73,7 @@
     z-index: 1;
 }
 .banner-wrapper{
-    background-image: url("https://res.cloudinary.com/dhgf3b54i/image/upload/v1663746223/samples/space-project/space-banner_drtlha.jpg");
+    background-image: url("../img/space-banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -55,10 +81,10 @@
     left: 0;
     z-index: -1;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 .banner-row{
-    padding-top: 136px;
+    padding: 136px 20px 0 20px;
     max-width: 1030px;
     height: 100%;
     margin: 0 auto;
@@ -70,6 +96,7 @@
 .head-1{
     font-size: 150px;
     font-family: 'Bellefair', serif;
+    font-weight: 400;
     color: #fff;
     line-height: 172px;
 }    
@@ -145,4 +172,10 @@
     font-family: 'Bellefair', serif;
     color: #0B0D17;
     font-size: 32px;
+}
+@media screen and (max-width: 768px){ 
+    .banner-row{
+        flex-direction: column;
+        padding-top: 200px;
+    }
 }
