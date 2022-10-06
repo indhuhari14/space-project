@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/svg" sizes="32x32" href="./assets/shared/logo.svg">
         <link rel="stylesheet" href="css/style.css">
+
+        <script src="index.js" defer></script>
     </head>
     <body class="home">
         <header class="primary-header flex">
@@ -15,23 +17,23 @@
             </div>
             <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">menu</span></button>
             <nav>
-                <ul class="primary-navigation underline-indicators flex">
+                <ul class="primary-navigation underline-indicators flex" data-visible="false">
                     <li class="active">
-                        <a class="ff-sans-cond fs-300 text-white upper-case letter-spacing-2" href=""><span>00</span>Home</a>
+                        <a class="ff-sans-cond fs-300 text-white upper-case letter-spacing-2" href=""><span aria-hidden="true">00</span>Home</a>
                     </li>
                     <li>
-                        <a class="ff-sans-cond fs-300 text-white upper-case letter-spacing-2" href=""><span>01</span>Destination</a>
+                        <a class="ff-sans-cond fs-300 text-white upper-case letter-spacing-2" href=""><span aria-hidden="true">01</span>Destination</a>
                     </li>
                     <li>
-                        <a class="ff-sans-cond fs-300 text-white upper-case letter-spacing-2" href=""><span>02</span>Crew</a>
+                        <a class="ff-sans-cond fs-300 text-white upper-case letter-spacing-2" href=""><span aria-hidden="true">02</span>Crew</a>
                     </li>
                     <li>
-                        <a class="ff-sans-cond fs-300 text-white upper-case letter-spacing-2" href=""><span>03</span>Technology</a>
+                        <a class="ff-sans-cond fs-300 text-white upper-case letter-spacing-2" href=""><span aria-hidden="true">03</span>Technology</a>
                     </li>
                 </ul>
             </nav>
         </header>
-        <div class="grid-container grid-container--home">
+        <main class="grid-container grid-container--home">
             <div>
                 <h1 class="ff-sans-cond fs-500 text-light letter-spacing-1 upper-case">So, you want to travel to
                 <span class="ff-serif fs-900 text-white d-block">Space</span></h1>
@@ -44,6 +46,6 @@
             <div>
                 <a class="large-button upper-case ff-serif text-dark bg-white" href="#">Explore</a>
             </div>
-        </div>        
+        </main>        
     </body>
 </html>
