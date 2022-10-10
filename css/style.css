@@ -171,6 +171,10 @@ select {
     margin-top: var(--flow-space, 1rem);
 }
 
+.flow--space-small {
+    --flow-space: .75rem;
+}
+
 .container {
     padding-inline: 2em;
     margin-inline: auto;
@@ -240,7 +244,9 @@ select {
     margin-right: .85em;
     color: hsl( var(--clr-light) / .25);
 }
+/* To use the hidden attribute */
 
+[hidden] { display: none !important; }
 /* ---------------------------- */
 /* Components                   */
 /* ---------------------------- */
@@ -310,7 +316,8 @@ select {
 .underline-indicators > *:focus {
     border-bottom: .2rem solid hsl( var(--clr-white) / .5 );
 }
-.underline-indicators > .active {
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
     color: var(--clr-light);
     border-bottom: .2rem solid hsl( var(--clr-white) / 1);
 }
@@ -335,7 +342,6 @@ select {
 .mobile-nav-toggle{
     display: none;
 }
-
 @media (max-width: 35em) {
     .primary-navigation {
         margin: 0;
@@ -511,7 +517,7 @@ body {
 .numbered-title {
     grid-area: title;
 }
-.grid-container--destination > img {
+.grid-container--destination > picture {
     grid-area: image;
     max-width: 60%;
 }
@@ -544,7 +550,7 @@ body {
 .grid-container--crew .numbered-title {
     grid-area: title;
 }
-.grid-container--crew > img {
+.grid-container--crew > picture {
     grid-area: image;
     max-width: 60%;
     border-bottom: 1px solid hsl( var(--clr-white) / .1);
@@ -555,11 +561,8 @@ body {
 .dot-indicators{
     grid-area: dot-indicator;
 }
-.grid-container--crew h2 span{
-    margin-top: .5rem;
-}
-.crew-info p{
-    margin-top: 1rem;
+.crew-info h2 {
+    color: hsl( var(--clr-white) / .5);
 }
 @media (min-width: 35em) {
 
@@ -575,6 +578,7 @@ body {
     }
 /* crew layout*/
     .grid-container--crew{
+        --flow-space: 2rem;
         grid-template-areas: 
         'title'
         'content'
@@ -612,7 +616,7 @@ body {
             '. image tabs .'
             '. image content .';
     }  
-    .grid-container--destination > img {
+    .grid-container--destination > picture {
         max-width: 90%;
     } 
     .destination-meta {
@@ -630,11 +634,14 @@ body {
     .dot-indicators {
         justify-self: start;
     } 
-    .grid-container--crew > img {
+    .grid-container--crew > picture {
         align-self: end;
     }
     .crew-info {
         justify-self: start;
+    }
+    .grid-container--crew > picture {
+        max-width: 60%;
     }
     
 }
