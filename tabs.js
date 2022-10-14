@@ -1,11 +1,8 @@
-
-
 //Tablist
 
 const tabList = document.querySelector('[role="tablist"]');
 const tabs = document.querySelectorAll('[role="tab"]');
-const articles = document.querySelectorAll(".destination-info");
-
+console.log(tabList);
 tabList.addEventListener('keydown', changeTabFocus);
 tabs.forEach((tab) => {
     tab.addEventListener('click', ChangeTabPanel);
