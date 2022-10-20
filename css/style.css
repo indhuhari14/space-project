@@ -17,6 +17,13 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Barlow Condensed';
+    src: url('../font/barlowcondensed-bold-webfont.woff') format('woff');
+    src: url('../font/barlowcondensed-bold-webfont.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}    
+@font-face {
     font-family: 'Barlow';
     src: url('../font/barlow-regular-webfont.woff') format('woff');
     src: url('../font/barlow-regular-webfont.woff2') format('woff2');
@@ -243,6 +250,7 @@ select {
     font-family: var(--ff-sans-cond);
     margin-right: .85em;
     color: hsl( var(--clr-light) / .25);
+    font-weight: bold;
 }
 /* To use the hidden attribute */
 
@@ -282,7 +290,7 @@ select {
 
 .numbered-button > *{
     cursor: pointer;
-    padding:0 1.5rem;
+    padding:0 2rem;
     border-radius: 50%;
     aspect-ratio: 1;
     background-color: transparent;
@@ -382,7 +390,7 @@ select {
         transform: translateX(0);
     }
 
-    .mobile-nav-toggle{
+    .mobile-nav-toggle {
         display: block;
         position: absolute;
         top: 2rem;
@@ -543,12 +551,12 @@ body {
     padding: 0 1rem;
     padding-bottom: 4rem;
 }
-.grid-container p:not([class]){
-    max-width: 50ch;
+.grid-container p[class="text-light"] {
+    max-width: 45ch;
 }
 
 /* Destination layout*/
-.grid-container--destination{ 
+.grid-container--destination { 
     --flow-space: 2rem;
     grid-template-areas: 
     'title'
@@ -563,10 +571,10 @@ body {
     grid-area: image;
     max-width: 60%;
 }
-.grid-container--destination > .tab-list{
+.grid-container--destination > .tab-list {
     grid-area: tabs;
 }
-.grid-container--destination > .destination-info{
+.grid-container--destination > .destination-info {
     grid-area: content;
 }
 .destination-meta{
@@ -581,7 +589,7 @@ body {
 }
 /* crew layout*/
 
-.grid-container--crew{
+.grid-container--crew {
     padding-bottom: 0;
     grid-template-areas: 
     'title'
@@ -608,7 +616,7 @@ body {
 }
 /* technology layout */
 
-.grid-container--technology{
+.grid-container--technology {
     --flow-space: 1rem;
     grid-template-areas: 
     'title'
@@ -620,7 +628,7 @@ body {
 .grid-container--technology .numbered-title {
     grid-area: title;
 }
-.grid-container--technology > picture{
+.grid-container--technology > picture {
     grid-area: image;
 }
 .grid-container--technology .numbered-button {
@@ -642,7 +650,7 @@ body {
         justify-content: space-evenly;
     }
 /* crew layout */
-    .grid-container--crew{
+    .grid-container--crew {
         --flow-space: 2rem;
         grid-template-areas: 
         'title'
@@ -652,7 +660,7 @@ body {
     }
 /* technology layout */
 
-    .grid-container--technology{
+    .grid-container--technology {
     --flow-space: 1rem;
     grid-template-areas: 
     'title'
@@ -726,11 +734,11 @@ body {
         max-width: 90%;
     }
 /* technology layout */
-    .grid-container.grid-container--technology{
-        grid-template-columns: minmax(5rem, 1fr) minmax(0, 4rem) minmax(0 , 45rem) minmax(0 , 46rem);
+    .grid-container.grid-container--technology {
+        grid-template-columns: minmax(5rem, 1fr) minmax(0, 4rem) minmax(0 , 46rem) minmax(0 , 45rem);
         padding-right: 0;
     }
-    .grid-container--technology{
+    .grid-container--technology { 
     --flow-space: 1rem;
     grid-template-areas: 
     '. title title title'
@@ -741,7 +749,10 @@ body {
         max-width: 100%;
         justify-self: flex-end;
     }    
-    .grid-container--technology .numbered-button{
+    .grid-container--technology .numbered-button {
         flex-direction: column;
+    }
+    .flow--space-small {
+        --flow-space: 1rem;
     }
 }
